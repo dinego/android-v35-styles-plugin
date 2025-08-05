@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="android-v35-styles-plugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Android V35 Styles Plugin</name>
+    <description>Cordova plugin to apply Android API 35 specific styles and configurations</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,android,api35,styles,cutout,notch</keywords>
+    <repo>https://github.com/your-username/android-v35-styles-plugin</repo>
+    <issue>https://github.com/your-username/android-v35-styles-plugin/issues</issue>
+
+    <js-module src="www/android-v35-styles.js" name="AndroidV35Styles">
+        <clobbers target="AndroidV35Styles" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AndroidV35Styles">
+                <param name="android-package" value="com.cordova.plugin.androidv35styles.AndroidV35StylesPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/AndroidV35StylesPlugin.java" target-dir="src/com/cordova/plugin/androidv35styles" />
+
+        <!-- Resource files for API 35 styles -->
+        <resource-file src="src/android/res/values-v35/styles.xml" target="app/src/main/res/values-v35/styles.xml" />
+
+        <!-- Hook to ensure API 35 target is set -->
+        <hook type="after_platform_add" src="hooks/after-platform-add.js" />
+        <hook type="after_prepare" src="hooks/after-prepare.js" />
+    </platform>
+</plugin> 

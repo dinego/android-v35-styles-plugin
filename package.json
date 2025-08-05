@@ -1,0 +1,39 @@
+{
+  "name": "android-v35-styles-plugin",
+  "version": "1.0.0",
+  "description": "Cordova plugin to apply Android API 35 specific styles and configurations",
+  "main": "www/android-v35-styles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "api35",
+    "styles",
+    "cutout",
+    "notch",
+    "display",
+    "window"
+  ],
+  "author": "Your Name",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/android-v35-styles-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/android-v35-styles-plugin/issues"
+  },
+  "homepage": "https://github.com/your-username/android-v35-styles-plugin#readme",
+  "cordova": {
+    "id": "android-v35-styles-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "engines": {
+    "cordova": ">=9.0.0",
+    "cordova-android": ">=10.0.0"
+  }
+} 
